@@ -7,6 +7,7 @@ body{
     overflow-x: hidden;
 }
 .home-container {
+    padding-top: 8em;
     background: linear-gradient(to right, #f8d5e0, #ffffff);
     padding-inline: 20px;
     display: flex;
