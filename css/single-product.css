@@ -1,0 +1,110 @@
+.container .row {
+
+
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+}
+
+/* TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  */
+.items {
+    flex: 1 1 40%; /* Takes 40% of the row */
+    max-width: 40%; /* Prevents growing beyond 40% */
+    height: auto; /* Remove fixed height */
+}
+
+.product-info {
+    flex: 1 1 60%; /* Takes the remaining 60% of the row */
+    max-width: 60%; /* Prevents growing beyond 60% */
+    padding-left: 20px; /* Space between the image and product info */
+}
+
+/* Make the image responsive */
+.items .item-image{
+    background-color: rgb(231, 229, 229);
+
+    display: block;
+    width: 100%; /* Without this one the image is going to retain it's original or natural size*/
+    height: 550px;
+}
+
+.items .small-img-col img{
+    background-color: rgb(231, 229, 229);
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Media query for smaller viewports */
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column; /* Stack the items vertically */
+    }
+
+    .items, 
+    .product-info {
+        max-width: 100%; /* Both take full width */
+        flex-basis: 100%; /* Ensures both take up full row */
+    }
+
+    .product-info {
+        padding-left: 0; /* Remove left padding when stacked */
+    }
+}
+
+/* THIS IS THE CHILD IMAGE OF THE MAIN IMAGE */
+.small-img-group {
+    display: flex;
+    justify-content: space-between; /* This can be changed to 'flex-start' or 'center' */
+}
+
+.small-img-col{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-block: .2em;
+    flex-basis: 24%;
+}
+
+.small-img-col img{
+    height: 80%;
+}
+
+
+/* PRODUCT DESCRIPTION PART */
+.product-info{
+    font-family: "Poppins";
+    
+}
+
+.product-info h6{
+    text-decoration: underline;
+    opacity: .5;
+}
+
+.buy-btn{
+    padding: .5em 1.2em;
+    border: 1px solid #a72020;
+    background-color: #a72020;
+    color: white;
+    cursor: pointer;
+    border-radius: .2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: Poppins;
+}
+
+.buy-btn:active{
+    transform: scale(0.9); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.product-info input{
+    width: 50px;
+    height: 40px;
+    padding-left: .3em;
+}
+
+.product-info input:focus{
+    outline: none;
+}

@@ -3,6 +3,9 @@
     scroll-padding:6.5em;
 }
 
+body{
+    overflow-x: hidden;
+}
 .home-container {
     background: linear-gradient(to right, #f8d5e0, #ffffff);
     padding-inline: 20px;
@@ -25,7 +28,7 @@
 
 .home-text {
     margin-inline: 2.3em;
-    width: 50%; /* Set the width for the text section */
+    width: 60%; /* Set the width for the text section */
     padding-block: 3em;
 }
 
@@ -62,7 +65,7 @@ span {
 }
 
 button {
-    background-color: #a72020; /* Match with your header text color */
+    background-color: #a72020; 
     color: white;
     border: none;
     border-radius: 5px; /* Rounded corners */
@@ -231,41 +234,78 @@ button:active{
 }
 
 
-/* FOOTER SECTION START */
-
+/* Footer Section */
 .footer-container{
-    /* background-color: rgb(177, 175, 175); */
-    background-color: rgb(231, 229, 229);
-
-    padding: 2em;
-    position:sticky;
-    bottom: 0;
-    left: 0;
+    background-color: rgb(168, 164, 164);
+    margin: 0;
+    padding: 0;
     width: 100%;
-    text-align: center;
-    z-index: 1000; /* Adjust as needed */
-    margin-top: 2em;
 }
-.footer-grid-row{
+.grid-footer-section{
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    padding-inline: 5em;
+    padding-block: 2.3em;
+    /* background-color: rgb(168, 164, 164); */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 2px solid black; /* Add this line */
 }
-.footer-main-section{
-    width: 65%;
-}
-
-.footer-main-section img{
-    color: white;
-}
-.footer-info-section{
-    display: flex;
-    flex-direction: column;
+.row.col-4 {
+    display: flex; /* Use flexbox */
+    align-items: center; 
     justify-content: center;
 }
-.footer-info-section .info-details{
+
+.row.col-4 .info-details{
     display: flex;
 }
+.row.col-4 .info-details strong{
+    margin-right: .4em;
+}
 
-.footer-info-section .info-details strong, i{
-    margin-inline: 1em;
+
+@media screen and (max-width:1020px){
+    .grid-footer-section{
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+
+
+@media screen and (max-width:500px){
+    .grid-footer-section{
+        display: block;
+        margin: 0 auto;
+    }
+}
+.contact-us-info {
+    /* This Spans all of the columns */
+    grid-column: 1 / -1; 
+    width: 100%;
+    border-top: 1px solid black;
+    width: 100%; 
+    margin: 0;
+    padding: 0; 
+    display: block; 
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.social-icons img{
+    width: 30px;
+    margin-inline: .8em;
+}
+@media screen and (max-width:550px){
+    .contact-us-info{
+        display: block;
+        text-align: center;
+    }
+    .row.col-4 .info-details{
+        flex-wrap: wrap;
+    }
+    
 }

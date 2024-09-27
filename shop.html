@@ -7,12 +7,14 @@
     <!-- <link rel="stylesheet" href="../css/products.css"> -->
     <!-- <link rel="stylesheet" href="../css/nav.css"> -->
     <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/signup.css"/>
      <!-- BOOTSTRAP -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- GOOGLE FONT -->
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,48 +27,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
+    <!-- REMIXICON -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <!-- BoxIcon -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
-    
-<nav class="navbar navbar-expand-lg custom-color fixed-top">
-    <div class="container-fluid nav-wrapper">
-        <!-- <img class="logo" src="../image/logo.webp" /> -->
-        <img class="logo" src="image/logo.webp" />
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-4 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+    <header>
+        <a href="#"><img class="logo" src="image/logo.webp"/></a>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#brands">Products</a>
+                <li>
+                    <a href="shop.html">Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about-us">About us</a>
+                <li>
+                    <a href="#featured">Features</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#featured">Featured</a>
+                <li>
+                    <a href="#about-us">About us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
+                <li>
+                    <a href="#footer">Contact Us</a>
                 </li>
             </ul>
-        </div>
-        <ul class="navbar-nav mb-4 mb-lg-0"> <!-- Moved this outside the collapsible div -->
-            <li class="nav-item">
-                <i class="fas fa-shopping-cart"></i>
-            </li>
-            <li class="nav-item">
-                <i class="fas fa-user"></i>
-            </li>
-            <button class="header-login-button">Login</button>
-        </ul>
-    </div>
-</nav>
 
+        </nav>
+
+        <ul class="right-side">
+            <div class="user-cart-icons">
+                <div class="bx bx-user" id="account-icon"></div>
+                <div class="bx bx-cart" id="cart"></div>
+                <button id="show-login">Sign up</button>
+            </div>
+ 
+            <div class="hamburger">
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </ul>
+    </header>
+    
 
 <form class="search-bar">
     <h1>Search Result</h1>
@@ -167,6 +174,80 @@
     </div>
 </section>
 
+
+<!-- Signin -->
+<div class="popup">
+    <div class="close-btn">&times;</div>
+    <div class="form">
+        <h2>Welcome back</h2>
+        <p>Please enter your credentials</p>
+        <form id="loginForm">
+            <div class="form-element inputs">
+                <input type="email" name="email" placeholder="Email" required/>
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="password" placeholder="Password" required/>
+            </div>
+            <div class="form-element">
+                <div class="form-element inline-links">
+                    <div class="check-remember">
+                        <input type="checkbox" name="checkbox" id="rememberme" required/>
+                        <label for="rememberme">Remember me</label>
+                    </div>
+                    <a class="forgot-pass" href="#">Forgot password?</a>
+                </div>
+            </div>
+            <div class="form-element">
+                <button type="submit" class="login-button">Sign in</button>
+            </div>
+            <div class="form-element">
+                <button class="google-sign-in">
+                    <img src="image/google-logo.png" alt="Google" class="social-icon">
+                     Sign in with Google
+                </button>
+            </div>
+            <div class="signup-prompt">
+                <span class="redirect-link">Don't have account?</span><a href="#" id="show-sign-up">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="signup-popup" id="signupPopup">
+    <div class="close-btn">&times;</div>
+    <div class="form">
+        <h2>Sign up now</h2>
+        <p>Please enter your credentials</p>
+        <form id="signupForm">
+            <div class="form-element inputs">
+                <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="confirmPass" placeholder="Confirm Password" required />
+            </div>
+            <div class="form-element">
+                <button type="submit" class="signup-button">Sign up</button>
+            </div>
+            <div class="form-element">
+                <button class="google-sign-up">
+                    <img src="image/google-logo.png" alt="Google" class="social-icon"> Sign up with Google
+                </button>
+            </div>
+            <div class="signup-prompt">
+                <span class="redirect-link">Already have an account?</span> 
+                <a href="#" id="show-sign-in">Sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 <!-- NOTE MAKE THE NAV BAR RESPONSIVE MAKE THE PAGINATION OR THE SHOP PAGE RESPONSIVE  -->
 <nav aria-label="Page navigation example">
     <ul class="pagination">
@@ -178,7 +259,125 @@
     </ul>
   </nav>
 
+
+  <footer>
+    <div class="footer-container">
+        <div class="grid-footer-section">
+            <div class="row col-1">
+                <strong><p>Company</p></strong>
+                <p>About</p>
+                <p>Features</p>
+                <p>Works</p>
+                <p>Health</p>
+            </div>
+      
+            <div class="row col-2">
+                <strong><p>Faq</p></strong>
+                <p>Account</p>
+                <p>Deliveries</p>
+                <p>Orders</p>
+                <p>Payments</p>
+            </div>
+    
+            <div class="row col-3">
+                <strong><p>Resources</p></strong>
+                <p>Products</p>
+                <p>Flowers</p>
+                <p>Bouquet</p>
+            </div>
+    
+            <div class="row col-4">
+                <strong><p>Social</p></strong>
+                <div class="info-details">
+                    <strong><p>Email:</p></strong>
+                    <p>sample@gmail.com</p>
+                </div>
+                
+                <div class="info-details">
+                    <strong><p>Phone:</p></strong>
+                    <p>(+63)09232322323</p>
+                </div>
+    
+                <div class="info-details">
+                    <strong><p>Address:</p></strong>
+                    <p>HELLO</p>
+                </div>
+            </div>
+
+            <div class="contact-us-info">
+                <h3>Connect with us</h3>
+                <div class="social-icons">
+                    <img src="image/facebook.webp"/>
+                    <img src="image/instagram.webp"/>
+                    <img src="image/twitte.webp"/>
+                    
+                </div>
+            </div>
+        </div>
+       </div>  
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function(){
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+
+</script>
+
+<!-- LOGIN FORM POPUP JS -->
+<script>
+    var showLoginLink = document.getElementById('show-sign-in');
+    var showLoginButton = document.getElementById('show-login');
+    var closePopupButton = document.querySelector('.popup .close-btn');
+    var popup = document.querySelector('.popup');
+    
+    const showSignupBtn = document.querySelector('#show-sign-up'); 
+    const signupPopup = document.querySelector('.signup-popup');
+    const closeSignupBtn = document.querySelector('.signup-popup .close-btn');
+
+    showLoginButton.addEventListener('click', function() {
+        // This is needed to go back up to the hero section
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        popup.classList.add('active');
+    });
+    
+    closePopupButton.addEventListener('click', function() {
+        popup.classList.remove('active');
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.classList.remove('active');
+        }
+    });
+
+    showLoginLink.addEventListener('click', () => {
+        popup.classList.add('active');
+        signupPopup.classList.remove('active');
+    });
+    // Show Sign-Up Popup
+    showSignupBtn.addEventListener('click', () => {
+        signupPopup.classList.add('active');
+        popup.classList.remove('active');
+    });
+
+    // Close Sign-Up Popup
+    closeSignupBtn.addEventListener('click', () => {
+        signupPopup.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === signupPopup) {
+            signupPopup.classList.remove('active');
+        }
+    });
+    </script>
+    
+    
 </body>
 </html>
 

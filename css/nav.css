@@ -24,8 +24,10 @@ nav {
 .nav-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: space-between; 
 }
+
+
 .nav-wrapper .navbar-toggler {
     border: none; /* Remove the border */
     outline: none; /* Remove the outline */
@@ -77,6 +79,8 @@ nav {
     -webkit-text-stroke: 2px black; /* Adds a black border */
 }
 
+
+
 /* Media query for mobile view */
 @media only screen and (max-width: 700px) {
     .navbar-expand-custom .navbar-collapse {
@@ -122,8 +126,6 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center; /* Vertically align items */
-        justify-content: flex-end; /* Align to the right */
-        margin-top: auto; /* Add this to push items to the bottom */
     }
 
     .nav-item a{
@@ -140,8 +142,5 @@ nav {
         display: flex; /* Show when toggled */
     }
 
-    .navbar-toggler {
-        margin-bottom: 1em; /* Space between toggler and links */
-    }
 }
 
