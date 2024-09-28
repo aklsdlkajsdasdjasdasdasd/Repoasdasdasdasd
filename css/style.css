@@ -39,6 +39,7 @@ body{
 .home-text h1 {
     font-size: 3.3rem;
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 850px) {
@@ -234,10 +235,102 @@ button:active{
 }
 
 
+/* Testimonials Section */
+.testimonial-container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 2em 15px;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header .title{
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.section-header span{
+    font-weight: 700;
+}
+
+.swiper-wrapper{
+    padding-block: 3em;
+}
+
+.testimonials{
+    padding: 100px 0 ;
+
+}
+
+.testimonials-item{
+    background-color: rgb(231, 229, 229);
+    padding: 30px;
+    border-radius: .3em;
+}
+.testimonials-item .info{
+    display: flex;
+    align-items: center;
+
+}
+.testimonials-item img{
+    max-width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.testimonials-item .name{
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.testimonials-item p{
+    margin-top: 20px;
+
+}
+
+.testimonials-item .rating{
+    margin-top: 15px;
+    font-size: 14px;
+    color: orange;
+}
+
+.js-testimonials-slider{
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background: #a72020 !important; 
+}
+.js-testimonials-slider .swiper-pagination {
+    position: absolute;
+    z-index: 20 !important; 
+}
+
+@media screen and (max-width:350px){
+    .testimonials-item img{
+        max-width: 65px;
+    }
+
+    .testimonials-item .name{
+        font-size: 20px;
+    }
+
+
+    .testimonials-item p{
+        font-size: 14px;
+    }
+}
+
 /* Footer Section */
 .footer-container{
     background-color: rgb(168, 164, 164);
-    margin: 0;
+    margin-top:5em;
     padding: 0;
     width: 100%;
 }

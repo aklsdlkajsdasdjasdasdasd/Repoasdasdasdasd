@@ -9,6 +9,7 @@
      <link rel="stylesheet" href="css/single-product.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/signup.css">
      <!-- BOOTSTRAP -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CDN  -->
@@ -36,7 +37,7 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    
+
     <header>
         <a href="#"><img class="logo" src="image/logo.webp"/></a>
         <nav class="nav-bar">
@@ -72,6 +73,9 @@
             </div>
         </ul>
     </header>
+    
+
+
 
     <section class="container products-layout my-5 pt-5">
         <div class="row mt-5">
@@ -107,6 +111,138 @@
             </div> 
         </div>
     </section>
+
+    <!-- Signin -->
+<div class="popup">
+    <div class="close-btn">&times;</div>
+    <div class="form">
+        <h2>Welcome back</h2>
+        <p>Please enter your credentials</p>
+        <form id="loginForm">
+            <div class="form-element inputs">
+                <input type="email" name="email" placeholder="Email" required/>
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="password" placeholder="Password" required/>
+            </div>
+            <div class="form-element">
+                <div class="form-element inline-links">
+                    <div class="check-remember">
+                        <input type="checkbox" name="checkbox" id="rememberme" required/>
+                        <label for="rememberme">Remember me</label>
+                    </div>
+                    <a class="forgot-pass" href="#">Forgot password?</a>
+                </div>
+            </div>
+            <div class="form-element">
+                <button type="submit" class="login-button">Sign in</button>
+            </div>
+            <div class="form-element">
+                <button class="google-sign-in">
+                    <img src="image/google-logo.png" alt="Google" class="social-icon">
+                     Sign in with Google
+                </button>
+            </div>
+            <div class="signup-prompt">
+                <span class="redirect-link">Don't have account?</span><a href="#" id="show-sign-up">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="signup-popup" id="signupPopup">
+    <div class="close-btn">&times;</div>
+    <div class="form">
+        <h2>Sign up now</h2>
+        <p>Please enter your credentials</p>
+        <form id="signupForm">
+            <div class="form-element inputs">
+                <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <div class="form-element inputs">
+                <input type="password" name="confirmPass" placeholder="Confirm Password" required />
+            </div>
+            <div class="form-element">
+                <button type="submit" class="signup-button">Sign up</button>
+            </div>
+            <div class="form-element">
+                <button class="google-sign-up">
+                    <img src="image/google-logo.png" alt="Google" class="social-icon"> Sign up with Google
+                </button>
+            </div>
+            <div class="signup-prompt">
+                <span class="redirect-link">Already have an account?</span> 
+                <a href="#" id="show-sign-in">Sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- LOGIN FORM POPUP JS -->
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function(){
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+
+
+    <!-- LOGIN FORM POPUP JS -->
+    var showLoginLink = document.getElementById('show-sign-in');
+    var showLoginButton = document.getElementById('show-login');
+    var closePopupButton = document.querySelector('.popup .close-btn');
+    var popup = document.querySelector('.popup');
+    
+    const showSignupBtn = document.querySelector('#show-sign-up'); 
+    const signupPopup = document.querySelector('.signup-popup');
+    const closeSignupBtn = document.querySelector('.signup-popup .close-btn');
+
+    showLoginButton.addEventListener('click', function() {
+        // This is needed to go back up to the hero section
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        popup.classList.add('active');
+    });
+    
+    closePopupButton.addEventListener('click', function() {
+        popup.classList.remove('active');
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.classList.remove('active');
+        }
+    });
+
+    showLoginLink.addEventListener('click', () => {
+        popup.classList.add('active');
+        signupPopup.classList.remove('active');
+    });
+    // Show Sign-Up Popup
+    showSignupBtn.addEventListener('click', () => {
+        signupPopup.classList.add('active');
+        popup.classList.remove('active');
+    });
+
+    // Close Sign-Up Popup
+    closeSignupBtn.addEventListener('click', () => {
+        signupPopup.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === signupPopup) {
+            signupPopup.classList.remove('active');
+        }
+    });
+    </script>
+    
     <script>
         let main_image = document.getElementById('main-image');
         let small_images = document.getElementsByClassName('small-img'); // Use 'small-img' instead of 'small-image'

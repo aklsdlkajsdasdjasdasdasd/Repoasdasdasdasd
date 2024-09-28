@@ -80,7 +80,7 @@ ul{
     margin-left: .5rem;
 }
 
-ul div:hover{
+ul .user-cart-icons div:hover{
     color: rgb(167, 20, 20);
 }
 
