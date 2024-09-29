@@ -20,6 +20,7 @@
                 transform 20ms ease-in-out 0ms;
 }
 
+
 .popup.active, .signup-popup.active{
     display: block;
     margin: 0 auto;
@@ -59,6 +60,22 @@
     margin: 15px 0;
 }
 
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 40px; /* Add space for the icons */
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px; /* Adjust this value for spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 .inline-links {
     display: flex;
     justify-content: space-between; /* Adjusts space between the checkbox and the link */
@@ -72,7 +89,8 @@
 
 
 .popup .form .form-element input[type="email"],
- .popup .form .form-element input[type="password"]{
+ .popup .form .form-element input[type="password"],
+ .popup .form .form-element input[type="text"] {
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -81,6 +99,7 @@
     border: 1px solid #aaa;
     border-radius: 5px;
 }
+
 
 .popup .form .form-element input:focus-within{
     background-color: rgb(241, 237, 237);
