@@ -5,23 +5,20 @@
     list-style: none;
     font-family: Poppins;
 }
-a{
+a, ul{
     margin: 0;
 }
-/* body{
-    padding-top: 5em;
-} */
 header{
-    position: fixed; /* Fixes the header */
-    top: 0; /* Sticks it to the top */
-    left: 0; /* Sticks it to the left */
-    right: 0; /* Sticks it to the right */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
     z-index: 1000;
     width: 100%;
     display: flex;
-    padding: 0 1em; /* Adjusted padding for consistency */
+    padding: 0 1em; 
     background-color: rgb(231, 229, 229);
-    align-items: center; /* Center vertically */
+    align-items: center; 
     justify-content: space-between;
     transition: all ease .50s;
     max-width: 100%;
@@ -43,6 +40,7 @@ header{
 .nav-bar ul{
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .nav-bar ul li a{
@@ -66,13 +64,14 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 }
 .right-side .user-cart-icons{
     display: flex;
     align-items: center;
 }
 
-.right-side .user-cart-icons div{
+.right-side .user-cart-icons div {
     font-size: 27px;
     margin-right: .5em;
     color: black;
@@ -87,10 +86,6 @@ ul .user-cart-icons div:hover{
     color: rgb(167, 20, 20);
 }
 
-@media only screen and (max-width: 1320px){
-}
-
-
 .nav-bar{
     position:relative;
     z-index: 20000;
@@ -99,9 +94,6 @@ ul .user-cart-icons div:hover{
 @media only screen and (max-width: 1050px) {
     .nav-bar ul li a{
         font-size: 16px;
-    }
-    .right-side .user-cart-icons div{
-        font-size: 20px;
     }
     .right-side .user-cart-icons button{
         font-size: 12px;
@@ -112,7 +104,9 @@ ul .user-cart-icons div:hover{
 }
 
 @media only screen and (max-width: 900px) {
-
+    .nav-bar ul, .right-side {
+        margin-bottom: 0;
+    }
     .hamburger{
         display: block;
         cursor: pointer;
@@ -133,7 +127,7 @@ ul .user-cart-icons div:hover{
 
     .nav-bar.active {
         opacity: 1;
-        height: auto; /* Allow the height to adjust based on content */
+        height: auto; 
     }
 
     .nav-bar ul {
@@ -149,12 +143,21 @@ ul .user-cart-icons div:hover{
         margin-bottom: 1em;
         color: black;
     }
+    .user-cart-icons button{
+        font-size: 15px;
+    }
+    .right-side .user-cart-icons div {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width:500px){
     .user-cart-icons button{
-        font-size: 10px;
+        font-size: 12px;
         padding: 10px 10px;
+    }
+    .right-side .user-cart-icons div {
+        font-size: 25px;
     }
 
     .logo{
@@ -169,16 +172,17 @@ ul .user-cart-icons div:hover{
     .logo{
         height: 80px;
     }
+
 }
 
 .user-cart-icons button{
     background-color: #a72020; 
     color: white;
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Spacing inside the button */
+    border-radius: 5px; 
+    padding: 10px 20px; 
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-inline: .5em;
 }

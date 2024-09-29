@@ -65,12 +65,12 @@
 }
 
 .password-container input {
-    padding-right: 40px; /* Add space for the icons */
+    padding-right: 40px;
 }
 
 .password-container i {
     position: absolute;
-    right: 10px; /* Adjust this value for spacing */
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -78,13 +78,13 @@
 
 .inline-links {
     display: flex;
-    justify-content: space-between; /* Adjusts space between the checkbox and the link */
-    align-items: center; /* Aligns items vertically in the center */
-    font-size: 15px; /* Set font size */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
 }
 
 .inline-links a {
-    text-decoration: none; /* Removes underline from link */
+    text-decoration: none;
 }
 
 
@@ -123,7 +123,7 @@
     cursor: pointer;
     border-radius: .2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 .popup .form .form-element .login-button:active{
     transform: scale(0.9); 
@@ -141,7 +141,7 @@
     cursor: pointer;
     border-radius: .2em;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
     color: black;
 
 }

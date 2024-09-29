@@ -8,54 +8,56 @@
 
 /* TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  TAKE NOTE OF THIS LINE  */
 .items {
-    flex: 1 1 40%; /* Takes 40% of the row */
-    max-width: 40%; /* Prevents growing beyond 40% */
-    height: auto; /* Remove fixed height */
+    flex: 1 1 40%;
+    max-width: 40%;
+    height: auto;
 }
 
 .product-info {
-    flex: 1 1 60%; /* Takes the remaining 60% of the row */
-    max-width: 60%; /* Prevents growing beyond 60% */
-    padding-left: 20px; /* Space between the image and product info */
+    flex: 1 1 60%;
+    max-width: 60%;
+    padding-left: 20px;
 }
 
-/* Make the image responsive */
+
 .items .item-image{
     background-color: rgb(231, 229, 229);
 
     display: block;
-    width: 100%; /* Without this one the image is going to retain it's original or natural size*/
+
+    width: 100%; 
     height: 550px;
 }
 
 .items .small-img-col img{
     background-color: rgb(231, 229, 229);
     display: block;
+    /* Without this one the image is going to retain it's original or natural size*/
     width: 100%;
     height: auto;
 }
 
-/* Media query for smaller viewports */
+
 @media (max-width: 992px) {
     .row {
-        flex-direction: column; /* Stack the items vertically */
+        flex-direction: column;
     }
 
     .items, 
     .product-info {
-        max-width: 100%; /* Both take full width */
-        flex-basis: 100%; /* Ensures both take up full row */
+        max-width: 100%;
+        flex-basis: 100%;
     }
 
     .product-info {
-        padding-left: 0; /* Remove left padding when stacked */
+        padding-left: 0;
     }
 }
 
-/* THIS IS THE CHILD IMAGE OF THE MAIN IMAGE */
+
 .small-img-group {
     display: flex;
-    justify-content: space-between; /* This can be changed to 'flex-start' or 'center' */
+    justify-content: space-between;
 }
 
 .small-img-col{
@@ -71,7 +73,7 @@
 }
 
 
-/* PRODUCT DESCRIPTION PART */
+
 .product-info{
     font-family: "Poppins";
     

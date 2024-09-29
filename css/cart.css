@@ -4,7 +4,7 @@ body {
     color: #333;
 }
 .cart-wrapper {
-    max-width: 100%; /* Use full width */
+    max-width: 100%;
     margin-inline: 4em;
 }
 
@@ -18,13 +18,13 @@ body {
     padding: 1em;
     text-align: left;
     border: 1px solid #e7e5e5;
-    vertical-align: top; /* Aligns the content to the top */
+    vertical-align: top;
     display: table-cell; 
 }
 
-/* Optional: Set a min-height for better visual consistency */
+
 .cart-wrapper table td {
-    min-height: 50px; /* Adjust as needed */
+    min-height: 50px;
 }
 
 .cart-wrapper table th {
@@ -39,7 +39,7 @@ body {
 
 .product-info .cart-image img {
     height: 50px;
-    width: 50px; /* Ensure images are uniform */
+    width: 50px;
     margin-right: 1em;
 }
 
@@ -61,7 +61,7 @@ body {
     text-decoration: underline;
 }
 
-/* Quantity input styling */
+
 .cart-item-quantity {
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ body {
     text-decoration: underline;
 }
 
-/* Subtotal column styling */
+
 .item-total {
     text-align: right;
     font-weight: bold;
@@ -93,9 +93,9 @@ body {
 
 
 
-/* Base styles (for larger screens) */
+
 .cart-wrapper {
-    max-width: 800px; /* Max width for larger screens */
+    max-width: 800px;
     margin: 0 auto;
 }
 @media (max-width: 600px) {
@@ -104,7 +104,7 @@ body {
     }
 
     .cart-wrapper table {
-        /* This is use to center the whole row */
+       
         display: flex;
         flex-direction: column;
         align-items: center;

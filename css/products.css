@@ -4,16 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* OPTIONAL FOR NOW */
+
 ul .header-login-button{
-    background-color: #a72020; /* Match with your header text color */
+    background-color: #a72020;
     color: white;
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Spacing inside the button */
-    font-size: 1.2rem; /* Font size */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -63,13 +63,12 @@ ul .header-login-button:active{
 }
 
 
-/* Shopping View Section */
+
 
 
 .shop-grid-container{
     display: grid;
-    /* THE 380px min in this code below is the main reason why is the image not being responsive in smaller viewport
-     */
+   
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     place-items: center;
@@ -78,22 +77,22 @@ ul .header-login-button:active{
     
 }
 
-/* For medium-sized screens (tablets) */
+
 @media (max-width: 1024px) {
     .shop-grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-columns: repeat(2, 1fr);
         padding-inline: 2em;
     }
 }
 
-    /* Mobile Viewport */
+   
 @media (max-width: 768px) {
     .shop-grid-container {
         grid-template-columns: repeat(1, 1fr); 
         padding-inline: 1em;
     }
 
-    /* Make the image smaller in smaller viewport */
+   
     .shop-grid-item img {
         width: 80%;  
         height: auto; 
@@ -123,7 +122,7 @@ ul .header-login-button:active{
 
 }
 
-/* PAGINATION */
+
 
 .pagination {
     display: flex;
@@ -141,7 +140,7 @@ ul .header-login-button:active{
     border-color: gray;
     transition: ease .2s all;
     padding-inline: 1.5em;
-    font-size: 1rem; /* Base font size */
+    font-size: 1rem;
 }
 
 .pagination .page-link:hover {
@@ -155,7 +154,7 @@ ul .header-login-button:active{
     font-weight: 700;
 }
 
-/* Pagination Responsive Design*/
+
 @media (max-width: 768px) {
     .pagination .page-link {
         padding-inline: 1em;
@@ -170,7 +169,7 @@ ul .header-login-button:active{
     }
 }
 
-/* Footer Section */
+
 .footer-container{
     background-color: rgb(168, 164, 164);
     margin: 0;
@@ -182,14 +181,14 @@ ul .header-login-button:active{
     grid-template-columns: 2fr 2fr 2fr 2fr;
     padding-inline: 5em;
     padding-block: 2.3em;
-    /* background-color: rgb(168, 164, 164); */
+   
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
-    border-bottom: 2px solid black; /* Add this line */
+    border-bottom: 2px solid black;
 }
 .row.col-4 {
-    display: flex; /* Use flexbox */
+    display: flex;
     align-items: center; 
     justify-content: center;
 }
@@ -217,7 +216,7 @@ ul .header-login-button:active{
     }
 }
 .contact-us-info {
-    /* This Spans all of the columns */
+   
     grid-column: 1 / -1; 
     width: 100%;
     border-top: 1px solid black;
