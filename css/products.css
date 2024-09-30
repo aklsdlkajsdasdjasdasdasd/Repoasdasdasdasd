@@ -179,9 +179,8 @@ ul .header-login-button:active{
 .grid-footer-section{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    padding-inline: 5em;
+    padding-inline: 10em;
     padding-block: 2.3em;
-   
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
@@ -196,10 +195,9 @@ ul .header-login-button:active{
 .row.col-4 .info-details{
     display: flex;
 }
-.row.col-4 .info-details strong{
+.row.col-4 .info-details p{
     margin-right: .4em;
 }
-
 
 @media screen and (max-width:1020px){
     .grid-footer-section{
@@ -259,3 +257,6 @@ ul .header-login-button:active{
     
 }
 
+.contact-us-info h3{
+    font-weight: 700;
+}
