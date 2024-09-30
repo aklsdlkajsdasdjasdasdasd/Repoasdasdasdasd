@@ -171,7 +171,7 @@ ul .header-login-button:active{
 
 
 .footer-container{
-    background-color: rgb(168, 164, 164);
+    background-color: rgb(231, 229, 229);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -246,12 +246,9 @@ ul .header-login-button:active{
         display: block;
         text-align: center;
     }
-}
-@media screen and (max-width:550px){
     .pagination .page-link {
         font-size: 15px;
     }
-
 }
 
 .contact-us-info h3{
