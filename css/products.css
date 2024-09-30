@@ -207,7 +207,12 @@ ul .header-login-button:active{
     }
 }
 
+@media screen and (max-width:680px){
+    .grid-footer-section{
+        padding-inline: 2em;
+    }
 
+}
 
 @media screen and (max-width:500px){
     .grid-footer-section{
@@ -221,8 +226,7 @@ ul .header-login-button:active{
     width: 100%;
     border-top: 1px solid black;
     width: 100%; 
-    margin: 0;
-    padding: 0; 
+    padding: 1em; 
     display: block; 
     margin-top: 1em;
     display: flex;
@@ -230,9 +234,19 @@ ul .header-login-button:active{
 }
 
 
-.social-icons img{
-    width: 30px;
+.contact-us-info .social-icons img{
+    width: 40px;
+    height: 40px;
     margin-inline: .8em;
+    border: 1px solid white;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    padding: .2em;
+    transition: all .50s ease;
+}
+.contact-us-info .social-icons img:hover{
+    filter:none;
+    transform: scale(1.2);
 }
 @media screen and (max-width:550px){
     .contact-us-info{

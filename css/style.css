@@ -380,26 +380,61 @@ button:active{
     width: 100%;
     border-top: 1px solid black;
     width: 100%; 
-    margin: 0;
-    padding: 0; 
+    padding-top: 1em; 
     display: block; 
     margin-top: 1em;
     display: flex;
     justify-content: space-between;
+
 }
 
 
-.social-icons img{
-    width: 30px;
+.contact-us-info .social-icons img{
+    width: 40px;
+    height: 40px;
     margin-inline: .8em;
+    border: 1px solid white;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    padding: .2em;
+    transition: all .50s ease;
 }
+.contact-us-info .social-icons img:hover{
+    filter:none;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:680px){
+    .grid-footer-section{
+        padding-inline: 2em;
+    }
+
+}
+
 @media screen and (max-width:550px){
     .contact-us-info{
         display: block;
         text-align: center;
     }
-    .row.col-4 .info-details{
-        flex-wrap: wrap;
-    }
     
+}
+
+
+.home-image-slider {
+    position: relative;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+.home-image-slider img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.home-image-slider img.active {
+    opacity: 1;
 }
