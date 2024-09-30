@@ -251,10 +251,12 @@ ul .header-login-button:active{
         display: block;
         text-align: center;
     }
-    .row.col-4 .info-details{
-        flex-wrap: wrap;
+}
+@media screen and (max-width:550px){
+    .pagination .page-link {
+        font-size: 15px;
     }
-    
+
 }
 
 .contact-us-info h3{
